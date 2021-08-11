@@ -18,15 +18,15 @@ ON p.PersonId = a.PersonId
 ```
 JOIN 分 LEFT JOIN， RIGHT JOIN，FULL JOIN， INNER JOIN，区别为：
 
-LEFT JOIN：取FROM的表的全集，把JOIN表里的内容对上去，JOIN表里没有就输出空值
+**LEFT JOIN：** 取FROM的表的全集，把JOIN表里的内容对上去，JOIN表里没有就输出空值
 
-RIGHT JOIN：取JOIN的表的全集，把FROM表里的内容对上去，FROM表里没有就输出空值
+**RIGHT JOIN：** 取JOIN的表的全集，把FROM表里的内容对上去，FROM表里没有就输出空值
 
-FULL JOIN：取两个表的并集
+**FULL JOIN：** 取两个表的并集
 
-INNER JOIN：取两个表的交集
+**INNER JOIN：** 取两个表的交集
 
-ON 后面写的是两张要关联表中共同存在的列
+**ON** 后面写的是两张要关联表中共同存在的列
 
 SQL中的JOIN和Python Pandas 中merge的对应：
 

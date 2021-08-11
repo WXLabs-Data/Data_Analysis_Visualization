@@ -1,11 +1,51 @@
 # 常用SQL语句（以LeetCode题目为例）
-## JOIN
+## SELECT
+数据获取一般只涉及SQL增改删查中的查，即只会用到SELECT。
+用法：
+```sql
+SELECT 表名.字段名 FROM 表名;
+```
+
+## JOIN--关联两张表
 LeetCode：175. 组合两个表
 
 https://leetcode-cn.com/problems/combine-two-tables/
 
 ```sql
-select p.FirstName, p.LastName, a.City, a.State from Person p
-left join Address a 
-on p.PersonId = a.PersonId
+SELECT p.FirstName, p.LastName, a.City, a.State FROM Person p
+LEFT JOIN Address a 
+ON p.PersonId = a.PersonId
 ```
+JOIN 分 LEFT JOIN， RIGHT JOIN，FULL JOIN， INNER JOIN，区别为：
+
+LEFT JOIN：取FROM的表的全集，把JOIN表里的内容对上去，JOIN表里没有就输出空值
+
+RIGHT JOIN：取JOIN的表的全集，把FROM表里的内容对上去，FROM表里没有就输出空值
+
+FULL JOIN：取两个表的并集
+
+INNER JOIN：取两个表的交集
+
+ON 后面写的是两张要关联表中共同存在的列
+
+SQL中的JOIN和Python Pandas 中merge的对应：
+
+SQL JOIN 的on 相当于 merge 参数中的 on
+
+SQL JOIN 的 LEFT、RIGHT 等 在merge 参数中相当于 how
+
+上述SQL用Python Pandas 的merge写：
+```python
+Person = pd.merge(Person, Address, on='PersonId', how='left')
+```
+
+## ORDER BY--排序
+
+## DISTINCT--去重
+
+## LIMIT
+
+## IF()--条件判断
+
+## IFNULL()--空值判断
+

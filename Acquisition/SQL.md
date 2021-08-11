@@ -114,10 +114,57 @@ LIMIT 1 OFFSET 1;
 |---|---|
 |2|200|
 
+截取数据需要两个参数：
+
+截取几行数据：LIMIT N
+
+跳过几行数据开始截取：OFFSET M
+
+OFFSET可省略，
+
+LIMIT N OFFSET M → LIMIT M, N
+
+参数数字会**颠倒**
 
 ## DISTINCT--去重
+LeetCode: 176. 第二高的薪水
+
+https://leetcode-cn.com/problems/second-highest-salary/
+
+当数据出现重复时，只排序和截取会出错
+
+数据：
+
+Salary
+|Id|Salary|
+|---|---|
+|1|100|
+|2|200|
+|3|300|
+|4|300|
+
+此时第二高的薪水依然是200，但按照上面的SQL写
+```sql
+SELECT * FROM Salary
+ORDER BY Salary
+LIMIT 1 OFFSET 1;
+```
+输出：
+|Id|Salary|
+|---|---|
+|3|300|
+
+所以需要对数据进行去重之后再做排序
+
+```sql
+SELECT DISTINCT * FROM Salary
+ORDER BY Salary
+LIMIT 1 OFFSET 1;
+```
+
+## IFNULL()--空值判断
 
 ## IF()--条件判断
 
-## IFNULL()--空值判断
+
 

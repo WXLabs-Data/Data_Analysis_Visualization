@@ -5,9 +5,13 @@
 ```sql
 SELECT 表名.字段名 FROM 表名;
 ```
+如果需要表中的所有字段可以用 * 表示，如：
+```sql
+SELECT * FROM 表名;
+```
 
 ## JOIN--关联两张表
-LeetCode：175. 组合两个表
+LeetCode: 175. 组合两个表
 
 https://leetcode-cn.com/problems/combine-two-tables/
 
@@ -40,10 +44,78 @@ Person = pd.merge(Person, Address, on='PersonId', how='left')
 ```
 
 ## ORDER BY--排序
+LeetCode: 176. 第二高的薪水
+
+https://leetcode-cn.com/problems/second-highest-salary/
+
+第二高的薪水的思路为降序排列后取第二个
+
+排序使用ORDER BY
+
+数据：
+
+Salary
+
+|Id|Salary|
+|---|---|
+|1|100|
+|2|200|
+|3|300|
+
+```sql
+SELECT * FROM Salary
+ORDER BY Salary;
+```
+输出：
+|Id|Salary|
+|---|---|
+|3|300|
+|2|200|
+|1|100|
+
+升序和降序可以在ORDER BY语句最后加：
+
+**升序**：ASC
+
+**降序**：DESC
+
+默认**降序**
+
+如：
+```sql
+SELECT * FROM Salary
+ORDER BY Salary DESC;
+```
+
+## LIMIT OFFSET--截取数据
+LeetCode: 176. 第二高的薪水
+
+https://leetcode-cn.com/problems/second-highest-salary/
+
+截取使用LIMIT OFFSET
+
+数据：
+
+Salary
+|Id|Salary|
+|---|---|
+|1|100|
+|2|200|
+|3|300|
+
+```sql
+SELECT * FROM Salary
+ORDER BY Salary
+LIMIT 1 OFFSET 1;
+```
+输出：
+
+|Id|Salary|
+|---|---|
+|2|200|
+
 
 ## DISTINCT--去重
-
-## LIMIT
 
 ## IF()--条件判断
 

@@ -17,7 +17,7 @@
     - 评估数据or行为数据
     - 
 ### 通过SQL在数据库取数
-参照Acquisition-SQL
+[参照Acquisition-SQL](https://github.com/WXLabs-Data/Data_Analysis_Visualization/blob/main/Acquisition/SQL.md)
 ## 获取的数据是不是有问题？--数据清洗（Cleaning）
 ### 空值
 ### 重复值

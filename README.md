@@ -28,3 +28,4 @@
 ### 聚类 —— 他们是不是可以分成几种类型
 ### 怎么证明量表是科学的
 ## 数据分析（Analysis） —— 如何能让结论一目了然？
+### [resource list](https://github.com/WXLabs-Data/Data_Analysis_Visualization/blob/main/Visualization/resources_list.md)

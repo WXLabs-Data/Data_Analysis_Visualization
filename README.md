@@ -19,7 +19,7 @@
 ### 通过SQL在数据库取数
 [参照Acquisition-SQL](https://github.com/WXLabs-Data/Data_Analysis_Visualization/blob/main/Acquisition/SQL.md)
 ## 数据清洗（Cleaning） —— 获取的数据是不是有问题？
-### 空值
+### 缺失值
 ### 重复值
 ### 异常值
 ## 数据分析（Analysis） —— 如何得到想要的结论？

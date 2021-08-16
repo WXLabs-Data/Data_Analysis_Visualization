@@ -6,8 +6,8 @@
 
 ## Python实现
 1. [datasciencescoop/Data-Visualization](https://github.com/datasciencescoop/Data-Visualization)
-  Matplotlib包：line chart, Bar chart, Scatter chart, Histogram, Pie charts, Area chart, Dount chart；
-  Seaborn包：各种图；
+Matplotlib包：line chart, Bar chart, Scatter chart, Histogram, Pie charts, Area chart, Dount chart；
+Seaborn包：各种图；
 
 ## R实现
 1. [R graph gallery](https://www.r-graph-gallery.com/index.html)
